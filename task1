@@ -1,0 +1,28 @@
+# University Academic Progression Audit
+
+name = input("Enter student name: ")
+
+marks = int(input("Enter semester marks (out of 100): "))
+attendance = float(input("Enter attendance percentage: "))
+
+subjects_passed = input("Have you passed all subjects? (yes/no): ").lower()
+prerequisites = input("Completed all prerequisites? (yes/no): ").lower()
+
+print("\n--- Academic Progress Report ---")
+print("Student Name:", name)
+
+if marks >= 40 and attendance >= 75 and subjects_passed == "yes" and prerequisites == "yes":
+    print("Status: Eligible for next semester")
+    print("Outstanding Requirements: None")
+else:
+    print("Status: Not Eligible for next semester")
+    print("Outstanding Requirements:")
+
+    if marks < 40:
+        print("- Improve semester marks")
+    if attendance < 75:
+        print("- Improve attendance")
+    if subjects_passed != "yes":
+        print("- Pass all subjects")
+    if prerequisites != "yes":
+        print("- Complete prerequisites")
