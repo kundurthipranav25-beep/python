@@ -1,0 +1,13 @@
+n = int(input("Enter number of transactions: "))
+
+transactions = []
+
+for i in range(n):
+    x = input("Enter transaction ID: ")
+
+    if x in transactions:
+        print("Duplicate transaction:", x)
+    else:
+        transactions.append(x)
+
+print("Transaction IDs:", transactions)
