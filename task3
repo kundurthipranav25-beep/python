@@ -1,0 +1,14 @@
+n = int(input("Enter number of subjects: "))
+
+for i in range(n):
+    print("Subject", i + 1)
+
+    m1 = int(input("Enter first exam marks: "))
+    m2 = int(input("Enter second exam marks: "))
+
+    if m2 > m1:
+        print("Improved")
+    elif m2 < m1:
+        print("Declined")
+    else:
+        print("No Change")
