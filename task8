@@ -1,0 +1,17 @@
+passengers = 0
+capacity = 50
+
+n = int(input("Enter number of stops: "))
+
+for i in range(n):
+    board = int(input("Enter boarding passengers: "))
+    leave = int(input("Enter leaving passengers: "))
+
+    passengers = passengers + board - leave
+
+    if passengers > capacity:
+        print("Bus Overloaded")
+    else:
+        print("Passengers:", passengers)
+
+print("Final Passengers:", passengers)
