@@ -1,0 +1,22 @@
+balance = 5000
+
+n = int(input("Enter number of transactions: "))
+
+for i in range(n):
+    print("1. Deposit")
+    print("2. Withdraw")
+
+    choice = int(input("Enter choice: "))
+    amount = int(input("Enter amount: "))
+
+    if choice == 1:
+        balance = balance + amount
+    elif choice == 2:
+        if amount <= balance:
+            balance = balance - amount
+        else:
+            print("Insufficient balance")
+    else:
+        print("Invalid choice")
+
+print("Final Balance:", balance)
