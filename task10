@@ -1,0 +1,17 @@
+n = int(input("Enter number of days: "))
+
+for i in range(n):
+    prepared = int(input("Enter meals prepared: "))
+    served = int(input("Enter meals served: "))
+
+    waste = prepared - served
+
+    percentage = (waste / prepared) * 100
+
+    print("Food Waste:", waste)
+    print("Waste Percentage:", percentage, "%")
+
+    if percentage > 20:
+        print("High Food Waste")
+    else:
+        print("Acceptable Food Waste")
